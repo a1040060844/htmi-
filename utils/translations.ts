@@ -120,9 +120,9 @@ export const translations = {
     hero: {
       since: "始于2004 • 中国义乌",
       professional: "专业香皂制造商",
-      title: "20年匠心",
-      titleItalic: "制皂",
-      desc: "全球领先的OEM/ODM合作伙伴。融合20年匠心工艺与义乌制造速度，为您的品牌赋能。",
+      title: "菁静制皂",
+      titleItalic: "二十载匠心",
+      desc: "菁静化妆品：全球领先的OEM/ODM合作伙伴。融合20年匠心工艺与义乌制造速度，为您的品牌注入纯净能量。",
       explore: "浏览产品",
       request: "索取画册"
     },
@@ -136,7 +136,7 @@ export const translations = {
         desc: "专为各国市场定制的配方，深入了解区域市场偏好。"
       },
       heritage: {
-        title: "20年匠心",
+        title: "20年传承",
         desc: "20年专注皂化工艺、香氛调配及自有品牌设计，成就卓越品质。"
       },
       quality: {
@@ -196,8 +196,8 @@ export const translations = {
       }
     },
     contact: {
-      title: "开启您的项目方式",
-      subtitle: "请按照以下步骤开始您与晶晶化妆品的合作。",
+      title: "开启您的项目",
+      subtitle: "请按照以下步骤开始您与菁静化妆品的合作。",
       step1: "1. 下载项目表单",
       step1Desc: "下载我们的项目咨询表格，了解所需填写的详细规格。",
       step2: "2. 填写项目详情",
@@ -210,9 +210,9 @@ export const translations = {
     footer: {
       headquarters: "总部地址",
       contact: "联系方式",
-      desc: "首选OEM/ODM香皂制造商。将20年义乌匠心带向世界。",
+      desc: "菁静化妆品：首选OEM/ODM香皂制造商。将20年义乌匠心带向世界。",
       address: "义乌市国际商贸城\n三区三楼26766",
-      rights: "JingJing Cosmetics. 版权所有."
+      rights: "菁静化妆品 JingJing Cosmetics. 版权所有."
     }
   },
   ar: {
