@@ -7,7 +7,7 @@ export const translations = {
       expertise: "Expertise",
       collections: "Collections",
       services: "OEM/ODM",
-      contact: "Contact",
+      contact: "How to Start",
       inquire: "Contact Us"
     },
     hero: {
@@ -56,12 +56,27 @@ export const translations = {
           category: "Natural Hair Care",
           title: "Usma & Arborvitae Bar",
           desc: "Enriched with Usma Grass & Arborvitae Leaf extracts. Balances scalp oil for lightweight volume and deeply nourishes for smooth, shiny hair."
+        },
+        {
+          category: "Skin Whitening",
+          title: "Snow Sensation Whitening Soap",
+          desc: "Deep cleansing formula with snow lotus extract for a bright, translucent complexion."
+        },
+        {
+          category: "Luxury Skincare",
+          title: "Pink Gold Whitening Soap",
+          desc: "Infused with 24k gold flakes and pink rose essence for ultimate radiance and luxury."
+        },
+        {
+          category: "AHA Brightening",
+          title: "AHA Pineapple Soap",
+          desc: "Natural fruit acids exfoliate gently, revealing smoother and glowing skin."
         }
       ]
     },
     partners: {
       title: "Brand Showcase",
-      subtitle: "Join over 500+ satisfied OEM/ODM partners worldwide."
+      subtitle: ""
     },
     services: {
       title: "OEM & ODM Excellence",
@@ -74,23 +89,16 @@ export const translations = {
       }
     },
     contact: {
-      title: "Start Your Project",
-      subtitle: "Request a quote or sample kit. Our team responds within 24 hours.",
-      name: "Name",
-      company: "Company",
-      email: "Email",
-      market: "Market Region",
-      details: "Inquiry Details",
-      detailsPlaceholder: "Tell us about your product needs, quantity, and timeline...",
-      submit: "Submit Inquiry",
-      regions: {
-        me: "Middle East",
-        la: "Latin America",
-        eu: "Europe",
-        na: "North America",
-        ap: "Asia Pacific",
-        af: "Africa"
-      }
+      title: "How to Start Your Project",
+      subtitle: "Follow these simple steps to begin your manufacturing journey with us.",
+      step1: "1. Download Our Form",
+      step1Desc: "Download the project inquiry spreadsheet to provide your specifications.",
+      step2: "2. Fill Out the Details",
+      step2Desc: "Include your desired quantity, ingredients, and packaging requirements.",
+      step3: "3. Email Your Project",
+      step3Desc: "Send the completed form to our global business email.",
+      downloadBtn: "Download Inquiry Form",
+      emailUs: "Email: business@jcsabon.com"
     },
     footer: {
       headquarters: "Headquarters",
@@ -106,7 +114,7 @@ export const translations = {
       expertise: "专业技术",
       collections: "产品系列",
       services: "代工服务",
-      contact: "联系我们",
+      contact: "开启项目",
       inquire: "联系我们"
     },
     hero: {
@@ -155,12 +163,27 @@ export const translations = {
           category: "天然洗护",
           title: "乌斯曼草侧柏叶洗发皂",
           desc: "蕴含乌斯曼草与侧柏叶等天然植萃。精准调节头皮水油平衡，深层滋养发根，令秀发轻盈蓬松、柔顺亮泽。"
+        },
+        {
+          category: "美白护肤",
+          title: "雪感焕白皂",
+          desc: "蕴含雪莲花萃取精华，深层洁净，令肌肤如雪般剔透亮白。"
+        },
+        {
+          category: "奢华护肤",
+          title: "粉金焕白皂",
+          desc: "融入24K金箔与粉玫瑰精华，带来极致奢华的焕白体验。"
+        },
+        {
+          category: "果酸焕肤",
+          title: "AHA菠萝皂",
+          desc: "天然果酸温和去角质，改善暗沉，重现肌肤光泽。"
         }
       ]
     },
     partners: {
       title: "品牌展示",
-      subtitle: "加入全球500+满意合作伙伴，共创商业价值。"
+      subtitle: ""
     },
     services: {
       title: "OEM & ODM 卓越服务",
@@ -173,23 +196,16 @@ export const translations = {
       }
     },
     contact: {
-      title: "开启您的项目",
-      subtitle: "索取报价或样品包。我们的团队将在24小时内回复。",
-      name: "姓名",
-      company: "公司名称",
-      email: "电子邮箱",
-      market: "目标市场",
-      details: "需求详情",
-      detailsPlaceholder: "请告知您的产品需求、数量及时间表...",
-      submit: "提交咨询",
-      regions: {
-        me: "中东",
-        la: "拉丁美洲",
-        eu: "欧洲",
-        na: "北美",
-        ap: "亚太地区",
-        af: "非洲"
-      }
+      title: "开启您的项目方式",
+      subtitle: "请按照以下步骤开始您与晶晶化妆品的合作。",
+      step1: "1. 下载项目表单",
+      step1Desc: "下载我们的项目咨询表格，了解所需填写的详细规格。",
+      step2: "2. 填写项目详情",
+      step2Desc: "在表格中填写您的定制需求、预期数量及特殊成分要求。",
+      step3: "3. 发送邮件联系",
+      step3Desc: "将填写完成的表单发送至我们的官方商务邮箱。",
+      downloadBtn: "下载项目咨询表",
+      emailUs: "邮箱: business@jcsabon.com"
     },
     footer: {
       headquarters: "总部地址",
@@ -205,7 +221,7 @@ export const translations = {
       expertise: "الخبرة",
       collections: "المجموعات",
       services: "تصنيع",
-      contact: "اتصل بنا",
+      contact: "ابدأ مشروعك",
       inquire: "اتصل بنا"
     },
     hero: {
@@ -254,12 +270,27 @@ export const translations = {
           category: "العناية بالشعر",
           title: "صابون شامبو عشبة الوسمة",
           desc: "غني بمستخلصات عشبة الوسمة وأوراق العفص. يوازن زيوت فروة الرأس ويغذي الجذور بعمق لشعر ناعم ولامع."
+        },
+        {
+          category: "تفتيح البشرة",
+          title: "Snow Sensation Whitening Soap",
+          desc: "تركيبة تنظيف عميق مع مستخلص زهرة الثلج لبشرة مشرقة وشفافة."
+        },
+        {
+          category: "عناية فاخرة",
+          title: "Pink Gold Whitening Soap",
+          desc: "غني رقائق الذهب عيار 24 وجوهر الورد الوردي لإشراقة وفخامة فائقة."
+        },
+        {
+          category: "تفتيح أحماض الفواكه",
+          title: "AHA Pineapple Soap",
+          desc: "أحماض الفواكه الطبيعية تقشر بلطف، لتكشف عن بشرة أكثر نعومة وتوهجاً."
         }
       ]
     },
     partners: {
       title: "معرض العلامات التجارية",
-      subtitle: "انضم إلى أكثر من ٥٠٠ شريك راضٍ في تصنيع المعدات الأصلية حول العالم."
+      subtitle: ""
     },
     services: {
       title: "التميز في OEM & ODM",
@@ -272,23 +303,16 @@ export const translations = {
       }
     },
     contact: {
-      title: "ابدأ مشروعك",
-      subtitle: "اطلب عرض سعر أو عينات. فريقنا يرد خلال ٢٤ ساعة.",
-      name: "الاسم",
-      company: "الشركة",
-      email: "البريد الإلكتروني",
-      market: "المنطقة المستهدفة",
-      details: "تفاصيل الاستفسار",
-      detailsPlaceholder: "أخبرنا عن احتياجات منتجك، والكمية، والجدول الزمني...",
-      submit: "إرسال الاستفسار",
-      regions: {
-        me: "الشرق الأوسط",
-        la: "أمريكا اللاتينية",
-        eu: "أوروبا",
-        na: "أمريكا الشمالية",
-        ap: "آسيا والمحيط الهادئ",
-        af: "أفريقيا"
-      }
+      title: "كيف تبدأ مشروعك",
+      subtitle: "اتبع هذه الخطوات البسيطة لبدء رحلتك معنا.",
+      step1: "١. قم بتنزيل النموذج",
+      step1Desc: "قم بتنزيل ملف إكسل الخاص باستفسارات المشاريع.",
+      step2: "٢. أكمل التفاصيل",
+      step2Desc: "أدخل الكمية المحددة والمكونات ومتطلبات التغليف.",
+      step3: "٣. أرسل مشروعك",
+      step3Desc: "أرسل النموذج المكتمل إلى بريدنا الإلكتروني للأعمال.",
+      downloadBtn: "تحميل نموذج الاستفسار",
+      emailUs: "business@jcsabon.com :البريد الإلكتروني"
     },
     footer: {
       headquarters: "المقر الرئيسي",

@@ -39,12 +39,6 @@ export const Partners: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        
-        <div className="text-center mt-12">
-            <p className="text-stone-500 text-sm italic">
-                {t.partners.subtitle}
-            </p>
-        </div>
       </div>
     </section>
   );

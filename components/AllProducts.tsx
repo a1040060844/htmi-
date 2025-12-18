@@ -15,7 +15,10 @@ export const AllProducts: React.FC = () => {
   const featuredImages = [
     'https://i.postimg.cc/3J2ChnN4/Generated-Image-December-13-2025-12-55PM.png', // Rice Soap
     'https://i.postimg.cc/MKtH1QFq/df3f2f6e-d1c9-41a2-8b37-15c78c0bddae.png', // Doctor Soap
-    'https://i.postimg.cc/Wbpbp4by/a5b793e5-5409-43cd-8884-2ec8c6d47797.png' // Shampoo Soap
+    'https://i.postimg.cc/Wbpbp4by/a5b793e5-5409-43cd-8884-2ec8c6d47797.png', // Shampoo Soap
+    'https://i.postimg.cc/c1cmVFzs/061f72d0-5fd6-43d9-abe6-d5720848b05d.png', // Snow Sensation
+    'https://i.postimg.cc/brBrbXm3/5d1ab2aa-71cf-4e7d-8f37-19d9995b6fe0.png', // Pink Gold
+    'https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png'  // Pineapple
   ];
 
   // Map the featured products from translations to match the list format
@@ -31,63 +34,8 @@ export const AllProducts: React.FC = () => {
   const otherProducts: ProductItem[] = [
     {
       category: language === 'zh' ? "美白护肤" : "Skin Whitening",
-      title: language === 'zh' ? "雪感焕白皂" : "Snow Sensation Whitening Soap",
-      image: "https://i.postimg.cc/c1cmVFzs/061f72d0-5fd6-43d9-abe6-d5720848b05d.png"
-    },
-    {
-      category: language === 'zh' ? "美白护肤" : "Skin Whitening",
-      title: language === 'zh' ? "粉金焕白皂" : "Pink Gold Whitening Soap",
-      image: "https://i.postimg.cc/brBrbXm3/5d1ab2aa-71cf-4e7d-8f37-19d9995b6fe0.png"
-    },
-    {
-      category: language === 'zh' ? "果酸焕肤" : "AHA Brightening",
-      title: language === 'zh' ? "AHA菠萝皂" : "AHA Pineapple Soap",
-      image: "https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png"
-    },
-    {
-      category: "Beauty",
-      title: "Oud & Amber Luxury Bar",
-      image: "https://images.unsplash.com/photo-1607006412353-3b10b7596d34?q=80&w=2670&auto=format&fit=crop"
-    },
-    {
-      category: "Beauty",
-      title: "Rose Petal Essence",
-      image: "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=2670&auto=format&fit=crop"
-    },
-    {
-      category: "Skincare",
-      title: "Sulfur Treatment Soap",
-      image: "https://images.unsplash.com/photo-1546552723-5e92be9794ba?q=80&w=2787&auto=format&fit=crop"
-    },
-    {
-      category: "Skincare",
-      title: "Salicylic Acne Bar",
-      image: "https://images.unsplash.com/photo-1596462502278-27bfdd403348?q=80&w=2670&auto=format&fit=crop"
-    },
-    {
-      category: "Skincare",
-      title: "Goat Milk Moisturizing",
-      image: "https://images.unsplash.com/photo-1555820585-c5ae44394b79?q=80&w=2525&auto=format&fit=crop"
-    },
-    {
-      category: "Household",
-      title: "Eco-Laundry Cube",
-      image: "https://images.unsplash.com/photo-1628163750074-f3a14b53361e?q=80&w=2670&auto=format&fit=crop"
-    },
-    {
-      category: "Household",
-      title: "Stain Remover Bar",
-      image: "https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?q=80&w=2670&auto=format&fit=crop"
-    },
-    {
-      category: "Hotel",
-      title: "Mini Guest Soaps",
-      image: "https://images.unsplash.com/photo-1612455648873-18c7c934c95f?q=80&w=2670&auto=format&fit=crop"
-    },
-    {
-      category: "Novelty",
-      title: "Fruit Shaped Series",
-      image: "https://images.unsplash.com/photo-1570194065650-d99fb4b8ccb0?q=80&w=2670&auto=format&fit=crop"
+      title: language === 'zh' ? "艺伎瓷肌皂" : "Geisha Porcelain Skin Soap",
+      image: "https://i.postimg.cc/yd1k5ZwH/7ff8a2a6-dfd5-4a83-8164-09d763ce1ce8.png"
     }
   ];
 

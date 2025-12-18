@@ -52,15 +52,10 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { code: 'ar', label: 'عربي' },
   ];
 
-  // Determine if we should use the dark theme (dark text) for the navbar
-  // This is true if we have scrolled down OR if we are not on the home page
   const useDarkTheme = isScrolled || currentPage !== 'home';
 
-  // Dynamic text color classes based on theme
   const textColorClass = useDarkTheme ? 'text-stone-800' : 'text-white';
   const hoverColorClass = useDarkTheme ? 'hover:text-stone-500' : 'hover:text-stone-200';
-  const borderColorClass = useDarkTheme ? 'border-stone-800' : 'border-white';
-  const buttonHoverClass = useDarkTheme ? 'hover:bg-stone-800 hover:text-white' : 'hover:bg-white hover:text-stone-900';
   const langInactiveClass = useDarkTheme ? 'text-stone-400 hover:text-stone-600' : 'text-white/60 hover:text-white';
   const langActiveClass = useDarkTheme ? 'text-stone-900 border-stone-900' : 'text-white border-white';
   const separatorClass = useDarkTheme ? 'border-stone-300' : 'border-white/30';
@@ -101,13 +96,6 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                </button>
              ))}
           </div>
-
-          <button 
-            onClick={() => handleNavClick('#contact')}
-            className={`border ${borderColorClass} ${textColorClass} ${buttonHoverClass} px-6 py-2 text-xs uppercase tracking-widest transition-all duration-300`}
-          >
-            {t.nav.inquire}
-          </button>
         </nav>
 
         {/* Mobile Menu Button */}
