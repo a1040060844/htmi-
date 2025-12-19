@@ -30,7 +30,7 @@ export const Contact: React.FC = () => {
   ];
 
   const handleCopyWeChat = () => {
-    navigator.clipboard.writeText('JCSabonFactory');
+    navigator.clipboard.writeText('jingjingcosmetics');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -132,7 +132,7 @@ export const Contact: React.FC = () => {
                 onMouseEnter={() => setShowQR(true)}
                 onMouseLeave={() => setShowQR(false)}
               >
-                JCSabonFactory
+                jingjingcosmetics
               </div>
               <p className="text-stone-400 text-xs mt-4">
                 {t.contact.emailUs}

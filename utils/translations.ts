@@ -92,13 +92,13 @@ export const translations = {
       title: "Start Your Project",
       subtitle: "Connect with our production team directly via WeChat for immediate consultation.",
       step1: "1. Add WeChat",
-      step1Desc: "Search for WeChat ID: JCSabonFactory or scan our code to connect.",
+      step1Desc: "Search for WeChat ID: jingjingcosmetics or scan our code to connect.",
       step2: "2. Remark 'Official Website'",
       step2Desc: "Include 'Official Website' in your request for priority processing.",
       step3: "3. Send Details & Photos",
       step3Desc: "Send your requirements and reference sample photos to our manager.",
       downloadBtn: "Copy WeChat ID",
-      emailUs: "Email: business@jcsabon.com"
+      emailUs: "Email: jingjingcosmetics@gmail.com"
     },
     footer: {
       headquarters: "Headquarters",
@@ -199,13 +199,13 @@ export const translations = {
       title: "开启项目",
       subtitle: "直接通过微信联系我们的生产团队，获取即时报价与建议。",
       step1: "1. 添加微信",
-      step1Desc: "扫描二维码或搜索微信号 JCSabonFactory 添加我们的商务经理。",
+      step1Desc: "扫描二维码或搜索微信号 jingjingcosmetics 添加我们的商务经理。",
       step2: "2. 备注为“官网”",
       step2Desc: "申请好友时请务必备注“来自官网”，以便我们优先处理您的需求。",
       step3: "3. 发送需求与图片",
       step3Desc: "发送您的具体定制需求以及参考样品的实拍图片。",
       downloadBtn: "复制微信号码",
-      emailUs: "邮箱: business@jcsabon.com"
+      emailUs: "邮箱: jingjingcosmetics@gmail.com"
     },
     footer: {
       headquarters: "总部地址",
@@ -306,13 +306,13 @@ export const translations = {
       title: "كيف تبدأ مشروعك",
       subtitle: "تواصل مع فريق الإنتاج لدينا مباشرة عبر WeChat للحصول على استشارة فورية.",
       step1: "١. إضافة WeChat",
-      step1Desc: "ابحث عن معرف WeChat: JCSabonFactory أو امسح الرمز للتواصل.",
+      step1Desc: "ابحث عن معرف WeChat: jingjingcosmetics أو امسح الرمز للتواصل.",
       step2: "٢. ملاحظة 'الموقع الرسمي'",
       step2Desc: "يرجى كتابة 'الموقع الرسمي' في طلبك لضمان المعالجة ذات الأولوية.",
       step3: "٣. إرسال المتطلبات والصور",
       step3Desc: "أرسل تفاصيل طلبك وصور العينات المرجعية إلى مديرنا.",
       downloadBtn: "نسخ معرف ويشات",
-      emailUs: "business@jcsabon.com :البريد الإلكتروني"
+      emailUs: "jingjingcosmetics@gmail.com :البريد الإلكتروني"
     },
     footer: {
       headquarters: "المقر الرئيسي",

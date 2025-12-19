@@ -27,8 +27,8 @@ export const Footer: React.FC = () => {
             <h5 className="text-stone-100 font-serif mb-4">{t.footer.contact}</h5>
             <p className="text-sm font-light leading-loose">
               +86 579 8888 8888<br/>
-              business@jcsabon.com<br/>
-              WeChat: JCSabonFactory
+              jingjingcosmetics@gmail.com<br/>
+              WeChat: jingjingcosmetics
             </p>
           </div>
         </div>
