@@ -89,15 +89,15 @@ export const translations = {
       }
     },
     contact: {
-      title: "How to Start Your Project",
-      subtitle: "Follow these simple steps to begin your manufacturing journey with us.",
-      step1: "1. Download Our Form",
-      step1Desc: "Download the project inquiry spreadsheet to provide your specifications.",
-      step2: "2. Fill Out the Details",
-      step2Desc: "Include your desired quantity, ingredients, and packaging requirements.",
-      step3: "3. Email Your Project",
-      step3Desc: "Send the completed form to our global business email.",
-      downloadBtn: "Download Inquiry Form",
+      title: "Start Your Project",
+      subtitle: "Connect with our production team directly via WeChat for immediate consultation.",
+      step1: "1. Add WeChat",
+      step1Desc: "Search for WeChat ID: JCSabonFactory or scan our code to connect.",
+      step2: "2. Remark 'Official Website'",
+      step2Desc: "Include 'Official Website' in your request for priority processing.",
+      step3: "3. Send Details & Photos",
+      step3Desc: "Send your requirements and reference sample photos to our manager.",
+      downloadBtn: "Copy WeChat ID",
       emailUs: "Email: business@jcsabon.com"
     },
     footer: {
@@ -196,15 +196,15 @@ export const translations = {
       }
     },
     contact: {
-      title: "开启您的项目",
-      subtitle: "请按照以下步骤开始您与菁静化妆品的合作。",
-      step1: "1. 下载项目表单",
-      step1Desc: "下载我们的项目咨询表格，了解所需填写的详细规格。",
-      step2: "2. 填写项目详情",
-      step2Desc: "在表格中填写您的定制需求、预期数量及特殊成分要求。",
-      step3: "3. 发送邮件联系",
-      step3Desc: "将填写完成的表单发送至我们的官方商务邮箱。",
-      downloadBtn: "下载项目咨询表",
+      title: "开启项目",
+      subtitle: "直接通过微信联系我们的生产团队，获取即时报价与建议。",
+      step1: "1. 添加微信",
+      step1Desc: "扫描二维码或搜索微信号 JCSabonFactory 添加我们的商务经理。",
+      step2: "2. 备注为“官网”",
+      step2Desc: "申请好友时请务必备注“来自官网”，以便我们优先处理您的需求。",
+      step3: "3. 发送需求与图片",
+      step3Desc: "发送您的具体定制需求以及参考样品的实拍图片。",
+      downloadBtn: "复制微信号码",
       emailUs: "邮箱: business@jcsabon.com"
     },
     footer: {
@@ -304,14 +304,14 @@ export const translations = {
     },
     contact: {
       title: "كيف تبدأ مشروعك",
-      subtitle: "اتبع هذه الخطوات البسيطة لبدء رحلتك معنا.",
-      step1: "١. قم بتنزيل النموذج",
-      step1Desc: "قم بتنزيل ملف إكسل الخاص باستفسارات المشاريع.",
-      step2: "٢. أكمل التفاصيل",
-      step2Desc: "أدخل الكمية المحددة والمكونات ومتطلبات التغليف.",
-      step3: "٣. أرسل مشروعك",
-      step3Desc: "أرسل النموذج المكتمل إلى بريدنا الإلكتروني للأعمال.",
-      downloadBtn: "تحميل نموذج الاستفسار",
+      subtitle: "تواصل مع فريق الإنتاج لدينا مباشرة عبر WeChat للحصول على استشارة فورية.",
+      step1: "١. إضافة WeChat",
+      step1Desc: "ابحث عن معرف WeChat: JCSabonFactory أو امسح الرمز للتواصل.",
+      step2: "٢. ملاحظة 'الموقع الرسمي'",
+      step2Desc: "يرجى كتابة 'الموقع الرسمي' في طلبك لضمان المعالجة ذات الأولوية.",
+      step3: "٣. إرسال المتطلبات والصور",
+      step3Desc: "أرسل تفاصيل طلبك وصور العينات المرجعية إلى مديرنا.",
+      downloadBtn: "نسخ معرف ويشات",
       emailUs: "business@jcsabon.com :البريد الإلكتروني"
     },
     footer: {
