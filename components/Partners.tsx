@@ -17,15 +17,15 @@ const brandLogos = [
   },
   {
     name: "Brand Logo 4",
-    url: "https://i.postimg.cc/k4gsSrbr/ac4e5568-5971-4e1b-82e8-0c2d8d590136.png"
-  },
-  {
-    name: "Brand Logo 5",
     url: "https://i.postimg.cc/ZnrLtTk9/a73f6088-adb1-46c8-b540-c42502d6cc73.png"
   },
   {
+    name: "Brand Logo 5",
+    url: "https://i.postimg.cc/cHY3r0x8/ac4e5568-5971-4e1b-82e8-0c2d8d590136.png"
+  },
+  {
     name: "Brand Logo 6",
-    url: "https://i.postimg.cc/SK2T1bKP/cb89aed4-f58d-4bb0-aab3-1a44ce8c19e1.png"
+    url: "https://i.postimg.cc/XqbC5mqH/cb89aed4-f58d-4bb0-aab3-1a44ce8c19e1.png"
   }
 ];
 
