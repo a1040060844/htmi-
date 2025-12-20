@@ -62,7 +62,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     { name: t.nav.heritage, href: '#heritage' },
     { name: t.nav.expertise, href: '#expertise' },
     { name: t.nav.collections, href: '#products' },
-    { name: t.nav.services, href: '#services' },
+    { name: t.nav.partners, href: '#partners' },
     { name: t.nav.contact, href: '#contact' },
   ];
 

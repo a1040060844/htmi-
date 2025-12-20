@@ -6,7 +6,7 @@ export const translations = {
       heritage: "Heritage",
       expertise: "Expertise",
       collections: "Collections",
-      services: "OEM/ODM",
+      partners: "Brands",
       contact: "How to Start",
       inquire: "Contact Us"
     },
@@ -41,6 +41,7 @@ export const translations = {
       subtitle: "Our Collections",
       title: "Curated Manufacturing",
       viewAll: "More",
+      aiDisclaimer: "Product images are AI-generated illustrations and do not represent actual company products.",
       items: [
         {
           category: "Skin Lightening",
@@ -113,7 +114,7 @@ export const translations = {
       heritage: "品牌传承",
       expertise: "专业技术",
       collections: "产品系列",
-      services: "代工服务",
+      partners: "品牌展示",
       contact: "开启项目",
       inquire: "联系我们"
     },
@@ -148,6 +149,7 @@ export const translations = {
       subtitle: "产品系列",
       title: "精选制造",
       viewAll: "更多",
+      aiDisclaimer: "产品图片为ai生成示意图，不代表我司产品",
       items: [
         {
           category: "美白滋润",
@@ -220,8 +222,8 @@ export const translations = {
       heritage: "التراث",
       expertise: "الخبرة",
       collections: "المجموعات",
-      services: "تصنيع",
-      contact: "ابدأ مشروعك",
+      partners: "العلامات التجارية",
+      contact: "كيف تبدأ",
       inquire: "اتصل بنا"
     },
     hero: {
@@ -255,6 +257,7 @@ export const translations = {
       subtitle: "مجموعاتنا",
       title: "تصنيع متقن",
       viewAll: "المزيد",
+      aiDisclaimer: "صور المنتجات هي رسوم توضيحية تم إنشاؤها بواسطة الذكاء الاصطناعي ولا تمثل منتجات الشركة الفعلية.",
       items: [
         {
           category: "تفتيح البشرة",

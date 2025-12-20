@@ -10,7 +10,7 @@ interface ProductItem {
 }
 
 export const AllProducts: React.FC = () => {
-  const { t, language } = useLanguage();
+  const { t, language, dir } = useLanguage();
 
   const featuredImages = [
     'https://i.postimg.cc/3J2ChnN4/Generated-Image-December-13-2025-12-55PM.png', // Rice Soap
@@ -42,8 +42,8 @@ export const AllProducts: React.FC = () => {
   const allProducts = [...featuredProducts, ...otherProducts];
 
   return (
-    <div className="pt-32 pb-24 min-h-screen bg-stone-50">
-      <div className="container mx-auto px-6">
+    <div className="pt-32 pb-4 min-h-screen bg-stone-50 flex flex-col">
+      <div className="container mx-auto px-6 flex-grow">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -100,6 +100,19 @@ export const AllProducts: React.FC = () => {
           })}
         </div>
       </div>
+
+      {/* AI Disclaimer at the absolute bottom-left, touching the footer */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="container mx-auto px-6 mt-12 pb-2 text-start"
+        dir={dir}
+      >
+        <p className="text-[7px] md:text-[8px] text-stone-200 font-light tracking-tighter opacity-70">
+          * {t.products.aiDisclaimer}
+        </p>
+      </motion.div>
     </div>
   );
 };
