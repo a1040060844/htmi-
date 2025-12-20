@@ -3,13 +3,18 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface ProductItem {
+  id: string;
   category: string;
   title: string;
   image: string;
   link?: string;
 }
 
-export const AllProducts: React.FC = () => {
+interface AllProductsProps {
+  onSelectProduct: (id: string) => void;
+}
+
+export const AllProducts: React.FC<AllProductsProps> = ({ onSelectProduct }) => {
   const { t, language, dir } = useLanguage();
 
   const featuredImages = [
@@ -22,17 +27,17 @@ export const AllProducts: React.FC = () => {
   ];
 
   // Map the featured products from translations to match the list format
-  // Index 2 is the Usma & Arborvitae Bar
   const featuredProducts: ProductItem[] = t.products.items.map((item, index) => ({
+    id: item.id,
     category: item.category,
     title: item.title,
-    image: featuredImages[index],
-    link: index === 2 ? 'https://www.jingjingcosmetics.xyz/' : undefined
+    image: featuredImages[index]
   }));
 
   // Expanded dummy product list
   const otherProducts: ProductItem[] = [
     {
+      id: "geisha-soap",
       category: language === 'zh' ? "美白护肤" : "Skin Whitening",
       title: language === 'zh' ? "艺伎瓷肌皂" : "Geisha Porcelain Skin Soap",
       image: "https://i.postimg.cc/yd1k5ZwH/7ff8a2a6-dfd5-4a83-8164-09d763ce1ce8.png"
@@ -56,48 +61,26 @@ export const AllProducts: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {allProducts.map((product, idx) => {
-            const CardContent = (
-              <>
-                <div className="aspect-square bg-stone-100 mb-4 overflow-hidden">
-                  <img 
-                    src={product.image} 
-                    alt={product.title} 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
-                  />
-                </div>
-                <span className="text-xs font-bold tracking-widest text-stone-400 uppercase">{product.category}</span>
-                <h3 className="font-serif text-xl text-stone-900 mt-2">{product.title}</h3>
-              </>
-            );
-
-            if (product.link) {
-              return (
-                <motion.a
-                  key={idx}
-                  href={product.link}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white p-4 shadow-sm hover:shadow-md transition-shadow block cursor-pointer"
-                >
-                  {CardContent}
-                </motion.a>
-              );
-            }
-
-            return (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
-              >
-                {CardContent}
-              </motion.div>
-            );
-          })}
+          {allProducts.map((product, idx) => (
+            <motion.div
+              key={product.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.1 }}
+              className="bg-white p-4 shadow-sm hover:shadow-md transition-shadow group cursor-pointer"
+              onClick={() => onSelectProduct(product.id)}
+            >
+              <div className="aspect-square bg-stone-100 mb-4 overflow-hidden">
+                <img 
+                  src={product.image} 
+                  alt={product.title} 
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                />
+              </div>
+              <span className="text-xs font-bold tracking-widest text-stone-400 uppercase">{product.category}</span>
+              <h3 className="font-serif text-xl text-stone-900 mt-2 group-hover:text-stone-600 transition-colors">{product.title}</h3>
+            </motion.div>
+          ))}
         </div>
       </div>
 

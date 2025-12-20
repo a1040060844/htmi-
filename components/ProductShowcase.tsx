@@ -13,9 +13,10 @@ const productImages = [
 
 interface ProductShowcaseProps {
   onViewAll: () => void;
+  onSelectProduct: (id: string) => void;
 }
 
-export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onViewAll }) => {
+export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onViewAll, onSelectProduct }) => {
   const { t } = useLanguage();
 
   return (
@@ -34,20 +35,13 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onViewAll }) =
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {t.products.items.map((product, index) => (
             <motion.div
-              key={index}
+              key={product.id}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="group cursor-pointer"
-              onClick={() => {
-                // Index 2 corresponds to Usma & Arborvitae Bar
-                if (index === 2) {
-                  window.location.href = 'https://www.jingjingcosmetics.xyz/';
-                } else {
-                  onViewAll();
-                }
-              }}
+              onClick={() => onSelectProduct(product.id)}
             >
               <div className="relative overflow-hidden aspect-[3/4] mb-6 bg-stone-100">
                 <img 

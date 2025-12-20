@@ -9,59 +9,85 @@ import { Partners } from './components/Partners';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { AllProducts } from './components/AllProducts';
+import { ProductDetail } from './components/ProductDetail';
 
 function AppContent() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
   const [scrollTarget, setScrollTarget] = useState<string | null>(null);
 
   useEffect(() => {
-    // If we have a scroll target and we've just landed on the home page, scroll to it
     if (currentPage === 'home' && scrollTarget) {
       const element = document.getElementById(scrollTarget);
       if (element) {
-        // Short delay to ensure the DOM is painted
         const timer = setTimeout(() => {
           element.scrollIntoView({ behavior: 'smooth' });
           setScrollTarget(null);
         }, 100);
         return () => clearTimeout(timer);
       } else {
-        // If element not found, clear target
         setScrollTarget(null);
       }
     }
   }, [currentPage, scrollTarget]);
 
-  const navigate = (page: string, targetSection?: string) => {
+  const navigate = (page: string, targetSection?: string, productId?: string) => {
     if (page === 'home' && targetSection) {
       setScrollTarget(targetSection);
     }
     
+    if (productId) {
+      setSelectedProductId(productId);
+    } else if (page !== 'product-detail') {
+      setSelectedProductId(null);
+    }
+
     setCurrentPage(page);
     
-    // Only scroll to top if we don't have a specific section target
     if (!targetSection) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'home':
+        return (
+          <>
+            <Hero />
+            <Features />
+            <ProductShowcase 
+              onViewAll={() => navigate('products')} 
+              onSelectProduct={(id) => navigate('product-detail', undefined, id)}
+            />
+            <Services />
+            <Partners />
+            <Contact />
+          </>
+        );
+      case 'products':
+        return (
+          <AllProducts 
+            onSelectProduct={(id) => navigate('product-detail', undefined, id)} 
+          />
+        );
+      case 'product-detail':
+        return (
+          <ProductDetail 
+            productId={selectedProductId} 
+            onBack={() => navigate('products')} 
+            onInquiry={() => navigate('home', 'contact')}
+          />
+        );
+      default:
+        return <Hero />;
     }
   };
 
   return (
     <main className="min-h-screen bg-stone-50 overflow-x-hidden selection:bg-stone-200 selection:text-stone-900">
       <Navbar currentPage={currentPage} onNavigate={navigate} />
-      
-      {currentPage === 'home' ? (
-        <>
-          <Hero />
-          <Features />
-          <ProductShowcase onViewAll={() => navigate('products')} />
-          <Services />
-          <Partners />
-          <Contact />
-        </>
-      ) : (
-        <AllProducts />
-      )}
-      
+      {renderPage()}
       <Footer />
     </main>
   );
