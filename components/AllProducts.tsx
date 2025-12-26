@@ -17,34 +17,23 @@ interface AllProductsProps {
 export const AllProducts: React.FC<AllProductsProps> = ({ onSelectProduct }) => {
   const { t, language, dir } = useLanguage();
 
-  const featuredImages = [
-    'https://i.postimg.cc/3J2ChnN4/Generated-Image-December-13-2025-12-55PM.png', // Rice Soap
-    'https://i.postimg.cc/MKtH1QFq/df3f2f6e-d1c9-41a2-8b37-15c78c0bddae.png', // Doctor Soap
-    'https://i.postimg.cc/Wbpbp4by/a5b793e5-5409-43cd-8884-2ec8c6d47797.png', // Shampoo Soap
-    'https://i.postimg.cc/c1cmVFzs/061f72d0-5fd6-43d9-abe6-d5720848b05d.png', // Snow Sensation
-    'https://i.postimg.cc/brBrbXm3/5d1ab2aa-71cf-4e7d-8f37-19d9995b6fe0.png', // Pink Gold
-    'https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png'  // Pineapple
-  ];
+  const productImages: Record<string, string> = {
+    'rice-milk': 'https://i.postimg.cc/3J2ChnN4/Generated-Image-December-13-2025-12-55PM.png',
+    'doctor-soap': 'https://i.postimg.cc/MKtH1QFq/df3f2f6e-d1c9-41a2-8b37-15c78c0bddae.png',
+    'usma-shampoo': 'https://i.postimg.cc/Wbpbp4by/a5b793e5-5409-43cd-8884-2ec8c6d47797.png',
+    'snow-lotus': 'https://i.postimg.cc/c1cmVFzs/061f72d0-5fd6-43d9-abe6-d5720848b05d.png',
+    'pink-gold': 'https://i.postimg.cc/brBrbXm3/5d1ab2aa-71cf-4e7d-8f37-19d9995b6fe0.png',
+    'aha-pineapple': 'https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png',
+    'geisha-soap': 'https://i.postimg.cc/yd1k5ZwH/7ff8a2a6-dfd5-4a83-8164-09d763ce1ce8.png'
+  };
 
-  // Map the featured products from translations to match the list format
-  const featuredProducts: ProductItem[] = t.products.items.map((item, index) => ({
+  // Map the products from translations to match the list format with correct images
+  const allProducts: ProductItem[] = t.products.items.map((item) => ({
     id: item.id,
     category: item.category,
     title: item.title,
-    image: featuredImages[index]
+    image: productImages[item.id] || 'https://via.placeholder.com/400'
   }));
-
-  // Expanded dummy product list
-  const otherProducts: ProductItem[] = [
-    {
-      id: "geisha-soap",
-      category: language === 'zh' ? "美白护肤" : "Skin Whitening",
-      title: language === 'zh' ? "艺伎瓷肌皂" : "Geisha Porcelain Skin Soap",
-      image: "https://i.postimg.cc/yd1k5ZwH/7ff8a2a6-dfd5-4a83-8164-09d763ce1ce8.png"
-    }
-  ];
-
-  const allProducts = [...featuredProducts, ...otherProducts];
 
   return (
     <div className="pt-32 pb-4 min-h-screen bg-stone-50 flex flex-col">
@@ -84,7 +73,6 @@ export const AllProducts: React.FC<AllProductsProps> = ({ onSelectProduct }) => 
         </div>
       </div>
 
-      {/* AI Disclaimer at the absolute bottom-left, touching the footer */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

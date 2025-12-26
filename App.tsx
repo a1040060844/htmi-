@@ -10,6 +10,7 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { AllProducts } from './components/AllProducts';
 import { ProductDetail } from './components/ProductDetail';
+import { GeishaDeepDive } from './components/GeishaDeepDive';
 
 function AppContent() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -38,7 +39,7 @@ function AppContent() {
     
     if (productId) {
       setSelectedProductId(productId);
-    } else if (page !== 'product-detail') {
+    } else if (page !== 'product-detail' && page !== 'geisha-deep-dive') {
       setSelectedProductId(null);
     }
 
@@ -77,6 +78,13 @@ function AppContent() {
             productId={selectedProductId} 
             onBack={() => navigate('products')} 
             onInquiry={() => navigate('home', 'contact')}
+            onDeepDive={() => navigate('geisha-deep-dive')}
+          />
+        );
+      case 'geisha-deep-dive':
+        return (
+          <GeishaDeepDive 
+            onBack={() => navigate('product-detail', undefined, 'geisha-soap')} 
           />
         );
       default:
@@ -84,11 +92,13 @@ function AppContent() {
     }
   };
 
+  const showNavAndFooter = currentPage !== 'geisha-deep-dive';
+
   return (
     <main className="min-h-screen bg-stone-50 overflow-x-hidden selection:bg-stone-200 selection:text-stone-900">
-      <Navbar currentPage={currentPage} onNavigate={navigate} />
+      {showNavAndFooter && <Navbar currentPage={currentPage} onNavigate={navigate} />}
       {renderPage()}
-      <Footer />
+      {showNavAndFooter && <Footer />}
     </main>
   );
 }

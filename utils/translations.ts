@@ -126,6 +126,18 @@ export const translations = {
             ingredients: "Pineapple Fruit Extract, Glycolic Acid (AHA), Lactic Acid, Vitamin C, Papaya Extract.",
             usage: "Best used in the evening. Lather and apply to skin. Do not use on broken or irritated skin. Follow with sunscreen during the day."
           }
+        },
+        {
+          id: "geisha-soap",
+          category: "Traditional Beauty",
+          title: "Geisha Porcelain Skin Soap",
+          desc: "Inspired by ancient beauty rituals for a flawless, translucent porcelain complexion.",
+          details: {
+            fullDesc: "Inspired by traditional beauty secrets, this specialized soap aims to refine skin texture and promote a porcelain-like clarity. Using carefully selected botanical extracts, it helps minimize the appearance of pores and brighten the overall complexion.",
+            benefits: ["Refines skin texture for a smooth finish", "Promotes a translucent porcelain glow", "Deeply purifies pores without drying", "Traditional brightening botanical blend"],
+            ingredients: "Pearl Powder, Sakura Extract, Tsubaki Oil, Sodium Palmate, Rice Bran Extract, Glycerin.",
+            usage: "Work into a rich lather. Massage onto face and neck in upward motions. Rinse with lukewarm water for best results."
+          }
         }
       ]
     },
@@ -252,7 +264,7 @@ export const translations = {
           title: "雪感焕白皂",
           desc: "蕴含雪莲花萃取精华，深层洁净，令肌肤如雪般剔透亮白。",
           details: {
-            fullDesc: "萃取高海拔稀有雪莲精华，针对色素沉着和暗沉。通过深层净化毛孔杂质，赋予肌肤如初雪般的通透感。",
+            fullDesc: "萃取高海拔稀有雪莲精华，针对色素沉着和暗暗沉。通过深层净化毛孔杂质，赋予肌肤如初雪般的通透感。",
             benefits: ["针对色斑与色素沉着", "洗感清爽凉润", "提升肌肤通透度", "深层净化毛孔"],
             ingredients: "雪莲花提取物、珍珠粉、曲酸、棕榈酸钠、天然植物精油。",
             usage: "早晚使用。配合起泡网使用效果更佳，将泡沫敷在脸上3分钟后洗去，效果更显著。"
@@ -280,6 +292,18 @@ export const translations = {
             benefits: ["温和化学剥脱", "改善肌肤纹理与平滑度", "天然酵素提亮", "清新热带果香"],
             ingredients: "菠萝果提取物、甘醇酸(AHA)、乳酸、维生素C、木瓜提取物。",
             usage: "建议晚间使用。揉搓出泡后涂抹，请勿用于受损或过敏肌肤。日间使用请配合防晒。"
+          }
+        },
+        {
+          id: "geisha-soap",
+          category: "传统美肤",
+          title: "艺伎瓷肌皂",
+          desc: "灵感源自传统美肤仪式，打造如瓷般无瑕通透的瓷肌感。",
+          details: {
+            fullDesc: "受传统美肤智慧启发，这款专业香皂旨在细致肌肤纹理，提升肌肤如陶瓷般的净透感。选用精选植萃成分，帮助缩小毛孔并显著提亮肤色。",
+            benefits: ["细致肌肤纹理，展现丝滑触感", "提亮肤色，展现如瓷般净透光泽", "深层净化毛孔而不干燥", "传统植萃亮肤配方"],
+            ingredients: "珍珠粉、樱花提取物、山茶花油、棕榈酸钠、米糠提取物、甘油。",
+            usage: "揉搓出丰盈泡沫，以向上打圈的方式按摩面部和颈部，随后用温水冲洗干净。"
           }
         }
       ]
@@ -435,6 +459,18 @@ export const translations = {
             benefits: ["تقشير كيميائي لطيف", "يحسن ملمس ونعومة البشرة", "إنزيمات فاكهة طبيعية للإشراق", "رائحة استوائية منعشة"],
             ingredients: "مستخلص فاكهة الأناناس، حمض الجليكوليك (AHA)، حمض اللاكتيك، فيتامين C.",
             usage: "يفضل استخدامه في المساء. يرغى ويوضع على البشرة. لا يستخدم على الجلد المتهيج. اتبعيه بواقي شمس في النهار."
+          }
+        },
+        {
+          id: "geisha-soap",
+          category: "جمال تقليدي",
+          title: "صابون غيشا بورسلين",
+          desc: "مستوحى من طقوس الجمال التقليدية للحصول على بشرة خالية من العيوب تشبه البورسلين.",
+          details: {
+            fullDesc: "مستوحى من أسرار الجمال التقليدية، يهدف هذا الصابون المتخصص إلى تحسين ملمس البشرة وتعزيز نقاء يشبه البورسلين. باستخدام مستخلصات نباتية مختارة بعناية، يساعد في تقليل مظهر المسام وتفتيح البشرة بشكل عام.",
+            benefits: ["يحسن ملمس البشرة لمسة نهائية ناعمة", "يعزز توهج البورسلين الشفاف", "ينقي المسام بعمق دون تجفيف", "مزيج نباتي تقليدي للتفتيح"],
+            ingredients: "مسحوق اللؤلؤ، مستخلص الساكورا، زيت التسوباكي، بالميتات الصوديوم، مستخلص نخالة الأرز.",
+            usage: "يرغى للحصول على رغوة غنية. يدلك على الوجه والرقبة بحركات تصاعدية. يشطف بماء فاتر للحصول على أفضل النتائج."
           }
         }
       ]

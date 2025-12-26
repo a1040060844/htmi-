@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
-import { ArrowLeft, ChevronRight, Sparkles, Droplets, Info } from 'lucide-react';
+import { ArrowLeft, ChevronRight, Sparkles, Droplets, Info, ExternalLink } from 'lucide-react';
 
 interface ProductDetailProps {
   productId: string | null;
   onBack: () => void;
   onInquiry: () => void;
+  onDeepDive?: () => void;
 }
 
 const productImages: Record<string, string> = {
@@ -15,16 +16,24 @@ const productImages: Record<string, string> = {
   'usma-shampoo': 'https://i.postimg.cc/Wbpbp4by/a5b793e5-5409-43cd-8884-2ec8c6d47797.png',
   'snow-lotus': 'https://i.postimg.cc/c1cmVFzs/061f72d0-5fd6-43d9-abe6-d5720848b05d.png',
   'pink-gold': 'https://i.postimg.cc/brBrbXm3/5d1ab2aa-71cf-4e7d-8f37-19d9995b6fe0.png',
-  'aha-pineapple': 'https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png'
+  'aha-pineapple': 'https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png',
+  'geisha-soap': 'https://i.postimg.cc/yd1k5ZwH/7ff8a2a6-dfd5-4a83-8164-09d763ce1ce8.png'
 };
 
-export const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack, onInquiry }) => {
-  const { t, dir } = useLanguage();
+export const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack, onInquiry, onDeepDive }) => {
+  const { t, dir, language } = useLanguage();
   
   const product = t.products.items.find(item => item.id === productId);
   const image = productId ? productImages[productId] : '';
 
   if (!product) return null;
+
+  const handleDeepDiveClick = (e: React.MouseEvent) => {
+    if (productId === 'geisha-soap' && onDeepDive) {
+      e.preventDefault();
+      onDeepDive();
+    }
+  };
 
   return (
     <div className="pt-32 pb-24 min-h-screen bg-white" dir={dir}>
@@ -74,6 +83,22 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack,
               {product.details?.fullDesc}
             </p>
 
+            {/* Product Specific Detail Image (Arborvitae / usma-shampoo) */}
+            {productId === 'usma-shampoo' && (
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                className="mb-10 rounded-lg overflow-hidden border border-stone-100"
+              >
+                <img 
+                  src="https://i.postimg.cc/0yKDmV4R/ce-bai-ye3.png" 
+                  alt="Detailed Ingredient View" 
+                  className="w-full h-auto object-cover"
+                />
+              </motion.div>
+            )}
+
             {/* Benefits List */}
             <div className="mb-12">
               <h3 className="text-xs uppercase tracking-[0.3em] font-bold text-stone-400 mb-6 flex items-center gap-2">
@@ -114,13 +139,24 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack,
             </div>
 
             {/* Call to Action */}
-            <div className="mt-16 flex flex-col sm:flex-row gap-6">
+            <div className="mt-16 flex flex-col sm:flex-row gap-4">
                <button 
                  onClick={onInquiry}
-                 className="px-10 py-5 bg-stone-900 text-white uppercase tracking-widest text-xs font-bold hover:bg-stone-700 transition-all flex items-center justify-center gap-3 shadow-xl"
+                 className="px-10 py-5 bg-stone-900 text-white uppercase tracking-widest text-xs font-bold hover:bg-stone-700 transition-all flex items-center justify-center gap-3 shadow-xl flex-1"
                >
                  {t.products.inquiry}
                </button>
+
+               <a 
+                 href={productId === 'geisha-soap' ? '#' : "https://www.jingjingcosmetics.xyz"} 
+                 target={productId === 'geisha-soap' ? '_self' : "_blank"}
+                 rel="noopener noreferrer"
+                 onClick={handleDeepDiveClick}
+                 className="px-10 py-5 border border-stone-900 text-stone-900 uppercase tracking-widest text-xs font-bold hover:bg-stone-50 transition-all flex items-center justify-center gap-3 flex-1"
+               >
+                 {language === 'zh' ? '详细介绍' : language === 'ar' ? 'مقدمة مفصلة' : 'Detailed Introduction'}
+                 <ExternalLink size={14} />
+               </a>
             </div>
           </motion.div>
         </div>
