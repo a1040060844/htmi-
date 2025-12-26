@@ -7,7 +7,6 @@ interface ProductDetailProps {
   productId: string | null;
   onBack: () => void;
   onInquiry: () => void;
-  onDeepDive?: () => void;
 }
 
 const productImages: Record<string, string> = {
@@ -16,24 +15,16 @@ const productImages: Record<string, string> = {
   'usma-shampoo': 'https://i.postimg.cc/Wbpbp4by/a5b793e5-5409-43cd-8884-2ec8c6d47797.png',
   'snow-lotus': 'https://i.postimg.cc/c1cmVFzs/061f72d0-5fd6-43d9-abe6-d5720848b05d.png',
   'pink-gold': 'https://i.postimg.cc/brBrbXm3/5d1ab2aa-71cf-4e7d-8f37-19d9995b6fe0.png',
-  'aha-pineapple': 'https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png',
-  'geisha-soap': 'https://i.postimg.cc/yd1k5ZwH/7ff8a2a6-dfd5-4a83-8164-09d763ce1ce8.png'
+  'aha-pineapple': 'https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png'
 };
 
-export const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack, onInquiry, onDeepDive }) => {
+export const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack, onInquiry }) => {
   const { t, dir, language } = useLanguage();
   
   const product = t.products.items.find(item => item.id === productId);
   const image = productId ? productImages[productId] : '';
 
   if (!product) return null;
-
-  const handleDeepDiveClick = (e: React.MouseEvent) => {
-    if (productId === 'geisha-soap' && onDeepDive) {
-      e.preventDefault();
-      onDeepDive();
-    }
-  };
 
   return (
     <div className="pt-32 pb-24 min-h-screen bg-white" dir={dir}>
@@ -148,10 +139,9 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ productId, onBack,
                </button>
 
                <a 
-                 href={productId === 'geisha-soap' ? '#' : "https://www.jingjingcosmetics.xyz"} 
-                 target={productId === 'geisha-soap' ? '_self' : "_blank"}
+                 href="https://www.jingjingcosmetics.xyz" 
+                 target="_blank" 
                  rel="noopener noreferrer"
-                 onClick={handleDeepDiveClick}
                  className="px-10 py-5 border border-stone-900 text-stone-900 uppercase tracking-widest text-xs font-bold hover:bg-stone-50 transition-all flex items-center justify-center gap-3 flex-1"
                >
                  {language === 'zh' ? '详细介绍' : language === 'ar' ? 'مقدمة مفصلة' : 'Detailed Introduction'}

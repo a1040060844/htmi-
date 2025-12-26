@@ -2,15 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const productImages: Record<string, string> = {
-  'rice-milk': 'https://i.postimg.cc/3J2ChnN4/Generated-Image-December-13-2025-12-55PM.png',
-  'doctor-soap': 'https://i.postimg.cc/MKtH1QFq/df3f2f6e-d1c9-41a2-8b37-15c78c0bddae.png',
-  'usma-shampoo': 'https://i.postimg.cc/Wbpbp4by/a5b793e5-5409-43cd-8884-2ec8c6d47797.png',
-  'snow-lotus': 'https://i.postimg.cc/c1cmVFzs/061f72d0-5fd6-43d9-abe6-d5720848b05d.png',
-  'pink-gold': 'https://i.postimg.cc/brBrbXm3/5d1ab2aa-71cf-4e7d-8f37-19d9995b6fe0.png',
-  'aha-pineapple': 'https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png',
-  'geisha-soap': 'https://i.postimg.cc/yd1k5ZwH/7ff8a2a6-dfd5-4a83-8164-09d763ce1ce8.png'
-};
+const productImages = [
+  'https://i.postimg.cc/3J2ChnN4/Generated-Image-December-13-2025-12-55PM.png', // Rice Soap
+  'https://i.postimg.cc/MKtH1QFq/df3f2f6e-d1c9-41a2-8b37-15c78c0bddae.png', // Doctor Soap
+  'https://i.postimg.cc/Wbpbp4by/a5b793e5-5409-43cd-8884-2ec8c6d47797.png', // Shampoo Soap
+  'https://i.postimg.cc/c1cmVFzs/061f72d0-5fd6-43d9-abe6-d5720848b05d.png', // Snow Sensation
+  'https://i.postimg.cc/brBrbXm3/5d1ab2aa-71cf-4e7d-8f37-19d9995b6fe0.png', // Pink Gold
+  'https://i.postimg.cc/tR2XYHc2/8390cdef-b71c-4167-8982-6fa5cc55573a.png'  // Pineapple
+];
 
 interface ProductShowcaseProps {
   onViewAll: () => void;
@@ -19,9 +18,6 @@ interface ProductShowcaseProps {
 
 export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onViewAll, onSelectProduct }) => {
   const { t } = useLanguage();
-
-  // Show only first 6 products on home page to maintain design balance
-  const featuredProducts = t.products.items.slice(0, 6);
 
   return (
     <section id="products" className="py-24 bg-white">
@@ -37,7 +33,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onViewAll, onS
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredProducts.map((product, index) => (
+          {t.products.items.map((product, index) => (
             <motion.div
               key={product.id}
               initial={{ opacity: 0, scale: 0.95 }}
@@ -49,7 +45,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({ onViewAll, onS
             >
               <div className="relative overflow-hidden aspect-[3/4] mb-6 bg-stone-100">
                 <img 
-                  src={productImages[product.id]} 
+                  src={productImages[index]} 
                   alt={product.title} 
                   className="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-110"
                 />
